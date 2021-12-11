@@ -1,5 +1,4 @@
 RUNNING MULTI-CONTAINER JAVA APPLICATION WITH DOCKER COMPOSE
-Hi. Thanks for watching this course. Here you can find some notes and resources related to the content shown in this module.
 
 
 ==============Clip 2. Setting up a Database Container==============
@@ -16,7 +15,7 @@ docker run -it --rm \
   postgres
 
 docker run -it --rm -p 5432:5432 -e POSTGRES_PASSWORD=1234 -e POSTGRES_DB=bookdb -v ${PWD}/db:/var/lib/postgresql/data postgres
-
+ if data directory “/var/lib/postgresql/data” has invalid permissions change permission or address (for example ${PWD}/db:postgresql)
 For Windows CMD:
 docker run -it --rm ^
   -p 5432:5432 ^
